@@ -354,7 +354,7 @@ body {
 }
 
 .skill-section h3:before {
-    content: "▸";
+    content: "→";
     position: absolute;
     left: 0;
     color: #667eea;
@@ -378,7 +378,7 @@ body {
 }
 
 .skill-section ul li:before {
-    content: "✓";
+    content: "•";
     position: absolute;
     left: 0;
     color: #2ecc71;
@@ -467,7 +467,7 @@ body {
 }
 
 .about-card h3:before {
-    content: "▸";
+    content: "→";
     position: absolute;
     left: 0;
     color: #667eea;
