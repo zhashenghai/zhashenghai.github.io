@@ -8,367 +8,282 @@
   <meta property="og:title" content="查胜海 | AI产品 & 金融工程">
   <meta property="og:description" content="中南财经政法大学金融工程专业，专注AI产品与数据驱动运营">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://zhashenghai.github.io/og-image.png">
+  <link rel="canonical" href="https://zhashenghai.github.io/">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "查胜海",
+    "url": "https://zhashenghai.github.io",
+    "email": "1320843216@qq.com",
+    "jobTitle": "AI产品实习生",
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "中南财经政法大学" },
+    "sameAs": ["https://github.com/zhashenghai"]
+  }
+  </script>
 </head>
 <body>
-  <!-- 跳转到主内容（无障碍） -->
-  <a href="#about" class="skip-link">跳转到主要内容</a>
 
-  <!-- 噪点纹理叠加层 -->
-  <div class="grain-overlay"></div>
+  <!-- 黑圈跟随鼠标 -->
+  <div class="cursor-circle" id="cursorCircle">
+    <span class="cursor-text" id="cursorText"></span>
+  </div>
 
-  <!-- 浮动导航栏 -->
+  <!-- 导航栏 -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="#hero" class="nav-brand">ZSH</a>
-      <div class="nav-links">
-        <a href="#about" class="nav-link" data-index="1">关于</a>
-        <a href="#education" class="nav-link" data-index="2">教育</a>
-        <a href="#projects" class="nav-link" data-index="3">项目</a>
-        <a href="#experience" class="nav-link" data-index="4">实习</a>
-        <a href="#skills" class="nav-link" data-index="5">技能</a>
-        <a href="#contact" class="nav-link" data-index="6">联系</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-link active" data-section="hero">关于</a>
+        <a href="#skills" class="nav-link" data-section="skills">技能</a>
+        <a href="#projects" class="nav-link" data-section="projects">项目</a>
+        <a href="#contact" class="nav-link" data-section="contact">合作</a>
       </div>
+      <div class="nav-indicator" id="navIndicator"></div>
       <button class="nav-toggle" id="navToggle" aria-label="菜单">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
+        <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- 全屏滚动容器 -->
-  <main class="snap-container" id="snapContainer">
-
-    <!-- Section 0: Hero -->
-    <section class="snap-section hero" id="hero">
-      <div class="section-inner">
-        <div class="hero-badge animate-in">
-          <span class="badge-dot"></span>
-          可立即到岗 · 可实习6个月以上
-        </div>
-        <h1 class="hero-title animate-in">
-          <span class="title-line">查胜海</span>
-          <span class="title-line title-accent">AI产品 · 金融工程</span>
-        </h1>
-        <p class="hero-subtitle animate-in">
-          中南财经政法大学 (211) · 加权成绩 91.1 · 专业前15%
-        </p>
-        <div class="hero-actions animate-in">
-          <a href="#projects" class="btn btn-primary">
-            <span>查看项目</span>
-            <span class="btn-icon-wrapper">
-              <span class="btn-icon">→</span>
-            </span>
-          </a>
-          <a href="#contact" class="btn btn-secondary">联系方式</a>
-        </div>
-        <div class="hero-scroll-hint animate-in">
-          <div class="scroll-indicator">
-            <div class="scroll-dot"></div>
-          </div>
-          <span>向下滚动</span>
-        </div>
-      </div>
-      <!-- 装饰元素 -->
-      <div class="hero-deco hero-deco-1"></div>
-      <div class="hero-deco hero-deco-2"></div>
-    </section>
-
-    <!-- Section 1: 关于我 -->
-    <section class="snap-section section" id="about">
-      <div class="section-inner">
-        <div class="section-header animate-in">
-          <span class="section-badge">01</span>
-          <h2 class="section-title">关于我</h2>
-        </div>
-        <div class="about-grid">
-          <div class="about-quote animate-in">
-            <blockquote>"善于从用户视角挖掘需求痛点，用数据驱动产品决策"</blockquote>
-          </div>
-          <div class="about-text animate-in">
-            <p>211院校金融工程专业在读，兼具数据分析基础与产品运营实践经验。有AI产品实习经历，参与过需求调研、竞品分析、测试验收等全流程工作。</p>
-            <p>独立完成AI用户访谈模拟器项目，积累了从用户洞察到产品落地的完整经验。对AI产品与运营方向有浓厚兴趣。</p>
-          </div>
-          <div class="about-stats animate-in">
-            <div class="stat-card">
-              <span class="stat-number" data-target="91.1">0</span>
-              <span class="stat-label">加权成绩 /100</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-number" data-target="15">0</span>
-              <span class="stat-label">专业排名前 %</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-number" data-target="2000">0</span>
-              <span class="stat-label">内容播放量</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-number" data-target="17">0</span>
-              <span class="stat-label">技能工具</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 2: 教育背景 -->
-    <section class="snap-section section" id="education">
-      <div class="section-inner">
-        <div class="section-header animate-in">
-          <span class="section-badge">02</span>
-          <h2 class="section-title">教育背景</h2>
-        </div>
-        <div class="edu-card animate-in">
-          <div class="edu-card-inner">
-            <div class="edu-meta">
-              <span class="edu-date">2023.09 — 2027.06</span>
-              <span class="edu-type">本科</span>
-            </div>
-            <h3 class="edu-school">中南财经政法大学</h3>
-            <p class="edu-major">金融工程 · 211工程院校</p>
-            <div class="edu-tags">
-              <span class="tag">加权成绩 91.1/100</span>
-              <span class="tag">排名 13/85 (前15%)</span>
-              <span class="tag">中共预备党员</span>
-            </div>
-          </div>
-        </div>
-        <div class="edu-highlight animate-in">
-          <p>核心能力：数据驱动运营 · 用户需求洞察 · 活动策划 · AI产品落地 · Prompt工程 · 流程优化 · SOP沉淀</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 3: 项目经历 -->
-    <section class="snap-section section" id="projects">
-      <div class="section-inner">
-        <div class="section-header animate-in">
-          <span class="section-badge">03</span>
-          <h2 class="section-title">项目经历</h2>
-        </div>
-        <div class="projects-grid">
-          <div class="project-card animate-in" data-project="1">
-            <div class="project-card-inner">
-              <div class="project-top">
-                <span class="project-date">2026.05</span>
-                <span class="project-role-badge">作者</span>
-              </div>
-              <h3 class="project-name">AI用户访谈模拟器</h3>
-              <p class="project-desc">基于大语言模型的用户访谈训练工具，解决产品从业者缺乏练习场景的痛点</p>
-              <div class="project-tech">
-                <span>Prompt Engineering</span>
-                <span>Streamlit</span>
-                <span>SQLite</span>
-                <span>TTS</span>
-              </div>
-              <div class="project-detail">
-                <ul>
-                  <li>设计新手、重度、流失、竞品四类用户画像，构建角色扮演系统</li>
-                  <li>开发四维度智能评估引擎（提问质量/追问深度/倾听能力/洞察提取）</li>
-                  <li>使用 Codex + Claude Code 完成全流程开发，集成语音合成与进步追踪</li>
-                </ul>
-                <a href="https://github.com/zhashenghai/user-interview-simulator" target="_blank" class="project-link">
-                  查看项目 <span class="link-arrow">↗</span>
-                </a>
-              </div>
-              <button class="project-expand-btn" aria-label="展开详情">
-                <span class="expand-line"></span>
-                <span class="expand-line"></span>
-              </button>
-            </div>
-          </div>
-
-          <div class="project-card animate-in" data-project="2">
-            <div class="project-card-inner">
-              <div class="project-top">
-                <span class="project-date">2024-2025</span>
-                <span class="project-role-badge">运营</span>
-              </div>
-              <h3 class="project-name">校团委多平台官号运营</h3>
-              <p class="project-desc">统筹社团招新与本科招生宣传两大核心项目，负责多平台内容运营</p>
-              <div class="project-tech">
-                <span>微信公众号</span>
-                <span>B站</span>
-                <span>内容运营</span>
-                <span>SOP</span>
-              </div>
-              <div class="project-detail">
-                <ul>
-                  <li>独立完成招生宣传视频策划、脚本、拍摄与后期对接</li>
-                  <li>B站累计播放量超2000次，多平台粉丝增长100+人</li>
-                  <li>沉淀多平台内容分发SOP与活动执行流程文档</li>
-                </ul>
-              </div>
-              <button class="project-expand-btn" aria-label="展开详情">
-                <span class="expand-line"></span>
-                <span class="expand-line"></span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 4: 实习经历 -->
-    <section class="snap-section section" id="experience">
-      <div class="section-inner">
-        <div class="section-header animate-in">
-          <span class="section-badge">04</span>
-          <h2 class="section-title">实习经历</h2>
-        </div>
-        <div class="experience-list">
-          <div class="exp-card animate-in">
-            <div class="exp-card-inner">
-              <div class="exp-header">
-                <div class="exp-meta">
-                  <span class="exp-date">2025.07 — 2025.09</span>
-                  <span class="exp-company">众言科技有限公司</span>
-                </div>
-                <span class="exp-role">AI产品实习生</span>
-              </div>
-              <ul class="exp-list">
-                <li>协助完成核心AI软件需求调研，输出5份调研报告，支撑3个版本迭代</li>
-                <li>独立编写50余条测试用例，提出4项优化建议，2项被采纳</li>
-                <li>参与用户行为数据分析，累计处理数据2万余条</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="exp-card animate-in">
-            <div class="exp-card-inner">
-              <div class="exp-header">
-                <div class="exp-meta">
-                  <span class="exp-date">2024.07 — 2024.08</span>
-                  <span class="exp-company">中国建设银行泉州支行</span>
-                </div>
-                <span class="exp-role">客户经理助理</span>
-              </div>
-              <ul class="exp-list">
-                <li>负责客户引导、业务咨询与需求对接</li>
-                <li>协助整理客户档案与业务资料，熟悉银行内部业务流程</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 5: 技能特长 -->
-    <section class="snap-section section" id="skills">
-      <div class="section-inner">
-        <div class="section-header animate-in">
-          <span class="section-badge">05</span>
-          <h2 class="section-title">技能特长</h2>
-        </div>
-        <div class="skills-grid">
-          <div class="skill-card animate-in">
-            <div class="skill-card-inner">
-              <h3 class="skill-card-title">AI工具应用</h3>
-              <div class="skill-tags">
-                <span>Claude Code</span>
-                <span>Codex</span>
-                <span>Prompt工程</span>
-              </div>
-            </div>
-          </div>
-          <div class="skill-card animate-in">
-            <div class="skill-card-inner">
-              <h3 class="skill-card-title">项目能力</h3>
-              <div class="skill-tags">
-                <span>用户调研</span>
-                <span>数据复盘</span>
-                <span>SOP沉淀</span>
-                <span>需求文档</span>
-                <span>竞品分析</span>
-              </div>
-            </div>
-          </div>
-          <div class="skill-card animate-in">
-            <div class="skill-card-inner">
-              <h3 class="skill-card-title">协作工具</h3>
-              <div class="skill-tags">
-                <span>飞书多维表格</span>
-                <span>文档协作</span>
-                <span>跨部门协作</span>
-              </div>
-            </div>
-          </div>
-          <div class="skill-card animate-in">
-            <div class="skill-card-inner">
-              <h3 class="skill-card-title">证书</h3>
-              <div class="skill-tags">
-                <span>大学英语六级</span>
-                <span>计算机二级</span>
-                <span>初级会计资格证</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 6: 联系方式 -->
-    <section class="snap-section section" id="contact">
-      <div class="section-inner">
-        <div class="section-header animate-in">
-          <span class="section-badge">06</span>
-          <h2 class="section-title">联系方式</h2>
-        </div>
-        <div class="contact-grid">
-          <a href="tel:13675929233" class="contact-card animate-in">
-            <div class="contact-card-inner">
-              <span class="contact-icon">📱</span>
-              <span class="contact-label">电话</span>
-              <span class="contact-value">13675929233</span>
-            </div>
-          </a>
-          <a href="mailto:1320843216@qq.com" class="contact-card animate-in">
-            <div class="contact-card-inner">
-              <span class="contact-icon">✉️</span>
-              <span class="contact-label">邮箱</span>
-              <span class="contact-value">1320843216@qq.com</span>
-            </div>
-          </a>
-          <a href="https://github.com/zhashenghai" target="_blank" class="contact-card animate-in">
-            <div class="contact-card-inner">
-              <span class="contact-icon">◆</span>
-              <span class="contact-label">GitHub</span>
-              <span class="contact-value">zhashenghai</span>
-            </div>
-          </a>
-          <a href="https://zhashenghai.github.io" target="_blank" class="contact-card animate-in">
-            <div class="contact-card-inner">
-              <span class="contact-icon">🌐</span>
-              <span class="contact-label">网站</span>
-              <span class="contact-value">zhashenghai.github.io</span>
-            </div>
-          </a>
-        </div>
-        <footer class="footer animate-in">
-          <p class="footer-text">Designed & Built by 查胜海</p>
-          <p class="footer-copy">© 2026 All Rights Reserved</p>
-        </footer>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- 进度指示器 -->
-  <div class="progress-indicator" id="progressIndicator">
-    <div class="progress-dots">
-      <button class="progress-dot active" data-index="0" aria-label="Hero"></button>
-      <button class="progress-dot" data-index="1" aria-label="关于"></button>
-      <button class="progress-dot" data-index="2" aria-label="教育"></button>
-      <button class="progress-dot" data-index="3" aria-label="项目"></button>
-      <button class="progress-dot" data-index="4" aria-label="实习"></button>
-      <button class="progress-dot" data-index="5" aria-label="技能"></button>
-      <button class="progress-dot" data-index="6" aria-label="联系"></button>
+  <!-- ===== 1. Hero Section ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-content">
+      <h1 class="hero-title" id="heroTitle">
+        <span class="title-line">HELLO, I'M</span>
+        <span class="title-line title-name"><em>查胜海</em></span>
+      </h1>
+      <p class="hero-subtitle fade-in">AI产品 / 21岁 / 福建泉州</p>
+      <p class="hero-hint fade-in">移动鼠标开启探索吧 · 向下滚动查看更多</p>
     </div>
-  </div>
+  </section>
+
+  <!-- ===== 2. 技能页面 ===== -->
+  <section class="section section-skills" id="skills">
+    <div class="container">
+      <h2 class="section-title fade-in">专业技能</h2>
+      <div class="skills-grid">
+        <!-- 卡片1: AI产品 -->
+        <div class="skill-card fade-in" data-expand="skill-1">
+          <div class="skill-card-header">
+            <div class="skill-card-icon">◆</div>
+            <div class="skill-card-stats">
+              <div class="stat"><span class="stat-num" data-target="3">0</span><span class="stat-unit">+</span><span class="stat-label">实习项目</span></div>
+              <div class="stat"><span class="stat-num" data-target="2">0</span><span class="stat-label">产品上线</span></div>
+              <div class="stat"><span class="stat-num" data-target="95">0</span><span class="stat-unit">%</span><span class="stat-label">需求交付率</span></div>
+            </div>
+          </div>
+          <h3 class="skill-card-title">AI产品核心</h3>
+          <p class="skill-card-desc">需求调研 · 竞品分析 · 用户洞察 · Prompt工程</p>
+          <div class="skill-card-expand">查看详情 ↓</div>
+        </div>
+        <div class="skill-detail-panel" id="skill-1">
+          <div class="skill-detail-inner">
+            <div class="skill-detail-item"><span>需求文档撰写</span><span class="skill-level">精通</span></div>
+            <div class="skill-detail-item"><span>竞品分析</span><span class="skill-level">精通</span></div>
+            <div class="skill-detail-item"><span>用户调研</span><span class="skill-level">精通</span></div>
+            <div class="skill-detail-item"><span>Prompt Engineering</span><span class="skill-level">熟练</span></div>
+            <div class="skill-detail-item"><span>数据复盘</span><span class="skill-level">熟练</span></div>
+          </div>
+        </div>
+
+        <!-- 卡片2: AI工具 -->
+        <div class="skill-card fade-in" data-expand="skill-2">
+          <div class="skill-card-header">
+            <div class="skill-card-icon">◇</div>
+            <div class="skill-card-stats">
+              <div class="stat"><span class="stat-num" data-target="8">0</span><span class="stat-label">工具掌握</span></div>
+              <div class="stat"><span class="stat-num" data-target="50">0</span><span class="stat-unit">+</span><span class="stat-label">测试用例</span></div>
+              <div class="stat"><span class="stat-num" data-target="20000">0</span><span class="stat-unit">+</span><span class="stat-label">数据处理量</span></div>
+            </div>
+          </div>
+          <h3 class="skill-card-title">AI工具应用</h3>
+          <p class="skill-card-desc">Claude Code · Codex · Workflow · Python</p>
+          <div class="skill-card-expand">查看详情 ↓</div>
+        </div>
+        <div class="skill-detail-panel" id="skill-2">
+          <div class="skill-detail-inner">
+            <div class="skill-detail-item"><span>Claude Code</span><span class="skill-level">精通</span></div>
+            <div class="skill-detail-item"><span>Codex</span><span class="skill-level">精通</span></div>
+            <div class="skill-detail-item"><span>Prompt工程</span><span class="skill-level">精通</span></div>
+            <div class="skill-detail-item"><span>Workflow搭建</span><span class="skill-level">熟练</span></div>
+            <div class="skill-detail-item"><span>Python</span><span class="skill-level">熟练</span></div>
+            <div class="skill-detail-item"><span>ChatGPT / DeepSeek / Mimo</span><span class="skill-level">熟练</span></div>
+          </div>
+        </div>
+
+        <!-- 卡片3: 工程能力 -->
+        <div class="skill-card fade-in" data-expand="skill-3">
+          <div class="skill-card-header">
+            <div class="skill-card-icon">△</div>
+            <div class="skill-card-stats">
+              <div class="stat"><span class="stat-num" data-target="4">0</span><span class="stat-label">平台运营</span></div>
+              <div class="stat"><span class="stat-num" data-target="2000">0</span><span class="stat-unit">+</span><span class="stat-label">播放量</span></div>
+              <div class="stat"><span class="stat-num" data-target="100">0</span><span class="stat-unit">+</span><span class="stat-label">粉丝增长</span></div>
+            </div>
+          </div>
+          <h3 class="skill-card-title">运营能力</h3>
+          <p class="skill-card-desc">内容运营 · 活动策划 · SOP沉淀 · 数据驱动</p>
+          <div class="skill-card-expand">查看详情 ↓</div>
+        </div>
+        <div class="skill-detail-panel" id="skill-3">
+          <div class="skill-detail-inner">
+            <div class="skill-detail-item"><span>多平台内容运营</span><span class="skill-level">精通</span></div>
+            <div class="skill-detail-item"><span>视频策划与拍摄</span><span class="skill-level">熟练</span></div>
+            <div class="skill-detail-item"><span>SOP流程沉淀</span><span class="skill-level">精通</span></div>
+            <div class="skill-detail-item"><span>跨部门协作</span><span class="skill-level">熟练</span></div>
+          </div>
+        </div>
+
+        <!-- 卡片4: 语言 & 证书 -->
+        <div class="skill-card fade-in" data-expand="skill-4">
+          <div class="skill-card-header">
+            <div class="skill-card-icon">○</div>
+            <div class="skill-card-stats">
+              <div class="stat"><span class="stat-num" data-target="6">0</span><span class="stat-label">CET-6</span></div>
+              <div class="stat"><span class="stat-num" data-target="2">0</span><span class="stat-label">计算机二级</span></div>
+              <div class="stat"><span class="stat-num" data-target="3">0</span><span class="stat-label">专业证书</span></div>
+            </div>
+          </div>
+          <h3 class="skill-card-title">语言 & 证书</h3>
+          <p class="skill-card-desc">大学英语六级 · 计算机二级 · 初级会计资格证</p>
+          <div class="skill-card-expand">查看详情 ↓</div>
+        </div>
+        <div class="skill-detail-panel" id="skill-4">
+          <div class="skill-detail-inner">
+            <div class="skill-detail-item"><span>大学英语六级 (CET-6)</span><span class="skill-level">已取得</span></div>
+            <div class="skill-detail-item"><span>全国计算机二级</span><span class="skill-level">已取得</span></div>
+            <div class="skill-detail-item"><span>初级会计资格证</span><span class="skill-level">已取得</span></div>
+            <div class="skill-detail-item"><span>飞书多维表格</span><span class="skill-level">熟练</span></div>
+            <div class="skill-detail-item"><span>文档协作</span><span class="skill-level">熟练</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. 项目经历 ===== -->
+  <section class="section section-projects" id="projects">
+    <div class="container">
+      <h2 class="section-title fade-in">项目经历</h2>
+      <div class="projects-grid">
+        <div class="project-card fade-in">
+          <span class="project-num">01</span>
+          <h3 class="project-title">AI用户访谈模拟器</h3>
+          <div class="project-tags">
+            <span class="ptag">Prompt Engineering</span>
+            <span class="ptag">LLM</span>
+            <span class="ptag">Streamlit</span>
+            <span class="ptag">SQLite</span>
+            <span class="ptag">TTS</span>
+          </div>
+          <p class="project-desc">独立设计并开发的基于大语言模型的用户访谈训练工具，设计四类用户画像与四维度智能评估系统</p>
+          <span class="project-year">2025</span>
+          <a href="https://github.com/zhashenghai/user-interview-simulator" target="_blank" class="project-link">查看项目 ↗</a>
+        </div>
+        <div class="project-card fade-in">
+          <span class="project-num">02</span>
+          <h3 class="project-title">校团委多平台官号运营</h3>
+          <div class="project-tags">
+            <span class="ptag">内容运营</span>
+            <span class="ptag">视频策划</span>
+            <span class="ptag">SOP</span>
+            <span class="ptag">数据分析</span>
+          </div>
+          <p class="project-desc">负责校团委官方账号在微信公众号、B站等多平台的内容运营，统筹社团招新与本科招生宣传</p>
+          <span class="project-year">2024</span>
+        </div>
+        <div class="project-card fade-in">
+          <span class="project-num">03</span>
+          <h3 class="project-title">众言科技AI产品实习</h3>
+          <div class="project-tags">
+            <span class="ptag">需求调研</span>
+            <span class="ptag">竞品分析</span>
+            <span class="ptag">测试验收</span>
+            <span class="ptag">数据分析</span>
+          </div>
+          <p class="project-desc">输出5份调研报告支撑3个版本迭代，编写50余条测试用例，处理数据2万余条</p>
+          <span class="project-year">2025</span>
+        </div>
+        <div class="project-card fade-in">
+          <span class="project-num">04</span>
+          <h3 class="project-title">中国建设银行实习</h3>
+          <div class="project-tags">
+            <span class="ptag">客户管理</span>
+            <span class="ptag">业务咨询</span>
+            <span class="ptag">流程规范</span>
+          </div>
+          <p class="project-desc">客户经理助理，负责客户引导、业务咨询与需求对接，熟悉银行内部业务流程</p>
+          <span class="project-year">2024</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. 合作 / 联系 ===== -->
+  <section class="section section-contact" id="contact">
+    <div class="container">
+      <h2 class="section-title fade-in">与我联系</h2>
+      <p class="contact-subtitle fade-in">可立即到岗，可实习6个月以上。对AI产品与运营方向有浓厚兴趣，期待与你一起创造有意义的产品。</p>
+
+      <div class="contact-grid">
+        <div class="contact-card fade-in">
+          <div class="contact-card-icon">📱</div>
+          <h3>电话</h3>
+          <p id="phoneDisplay">点击查看</p>
+        </div>
+        <a href="mailto:1320843216@qq.com" class="contact-card fade-in">
+          <div class="contact-card-icon">✉️</div>
+          <h3>邮箱</h3>
+          <p>1320843216@qq.com</p>
+        </a>
+        <a href="https://github.com/zhashenghai" target="_blank" class="contact-card fade-in">
+          <div class="contact-card-icon">◆</div>
+          <h3>GitHub</h3>
+          <p>github.com/zhashenghai</p>
+        </a>
+        <a href="https://zhashenghai.github.io" target="_blank" class="contact-card fade-in">
+          <div class="contact-card-icon">🌐</div>
+          <h3>网站</h3>
+          <p>zhashenghai.github.io</p>
+        </a>
+      </div>
+
+      <div class="contact-tags fade-in">
+        <span class="ctag">AI产品</span>
+        <span class="ctag">用户调研</span>
+        <span class="ctag">数据驱动</span>
+        <span class="ctag">内容运营</span>
+        <span class="ctag">Prompt工程</span>
+      </div>
+
+      <div class="contact-cta fade-in">
+        <p>有任何问题咨询，请通过邮箱联系：<strong>1320843216@qq.com</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <span>Copyright © 2026 查胜海. All Rights Reserved</span>
+  </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    (function() {
+      var p1='136',p2='7592',p3='9233';
+      var full=p1+p2+p3;
+      var display=document.getElementById('phoneDisplay');
+      var link=document.querySelector('.contact-card:first-child');
+      if(display) display.textContent=full;
+      if(link){link.style.cursor='pointer';link.addEventListener('click',function(){window.location.href='tel:'+full;});}
+    })();
+  </script>
 </body>
 </html>
