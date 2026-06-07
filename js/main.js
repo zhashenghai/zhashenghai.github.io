@@ -51,12 +51,13 @@ function setupHeroScrollSnap() {
       return;
     }
 
-    // 仅在技能区顶部边界向上滚 → snap 回 hero
+    // 在技能区顶部附近向上滚 → snap 回 hero
     if (e.deltaY < 0) {
       const skillsSection = document.getElementById('skills');
       if (skillsSection) {
         const rect = skillsSection.getBoundingClientRect();
-        if (rect.top >= -5 && rect.top <= 5) {
+        // 技能区顶部在视口上方 200px 以内都算"边界"
+        if (rect.top >= -200 && rect.top <= 200) {
           e.preventDefault();
           isScrolling = true;
           heroSection.scrollIntoView({ behavior: 'smooth' });
